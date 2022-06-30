@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get "/products", controller: "product", action: "all_products"
+  get "/products", controller: "products", action: "product"
 end
