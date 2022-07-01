@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
-  get "/all_products" => "products#index"
+  get "/products" => "products#index"
 
   get "/index" => "products#index"
 
-  get "/one_product/:id" => "products#oneproduct"
+  get "/product/:id" => "products#product"
+
+  post "products" => "products#create"
+
+  patch "/products/:id" => "products#update"
+
+  delete "products/:id" => "products#destroy"
 end

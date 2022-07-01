@@ -1,4 +1,36 @@
-# Product Index
+### Product Index
 
 GET http://localhost:3000/index.json
 
+
+###Product Show
+
+GET http://localhost:3000/product/7.json
+
+
+### Product Create
+
+POST http://localhost:3000/products.json
+Content-Type: application/json
+
+{
+  "name": "test name",
+  "price": "test price",
+  "image_url": "test image_url",
+  "description": "test description"
+}
+
+
+### Product Update
+
+PATCH http://localhost:3000/products/7.json
+Content-Type: application/json
+
+{
+
+  "title": "Saber Tooth Tigers"
+}
+
+### Product Delete
+
+DELETE http://localhost:3000/products/21.json
