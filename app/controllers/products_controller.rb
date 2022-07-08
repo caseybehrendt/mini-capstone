@@ -1,25 +1,25 @@
 class ProductsController < ApplicationController
   def all_products
     products = Product.all
-    render json: products.as_json
+    render template: "products/index"
   end
 
   def index
     products = Product.all
-    render json: products.as_json
+    render json: products.as_json(methods: [:friendly_created_at])
   end
 
-  def product
-    products = Product.find_by(id: params["id"])
+  def show
+    product = Product.find_by(id: params[:id])
     render json: product.as_json
   end
 
   def create
     product = Product.new(
-      name: params["name"],
-      price: params["price"],
-      image_url: params["image_url"],
-      description: params["description"],
+      name: params[:name],
+      price: params[:price],
+      image_url: params[:image_url],
+      description: params[:description],
     )
 
     product.save
@@ -36,7 +36,7 @@ class ProductsController < ApplicationController
     product.description = params["decription"] || product.description
 
     product.save
-    render json: product.as_json
+    render template: "products/show"
   end
 
   def destroy

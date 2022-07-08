@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   get "/products" => "products#index"
 
-  get "/index" => "products#index"
+  get "/products" => "products#new"
 
-  get "/product/:id" => "products#product"
+  get "/product/:id" => "products#show"
 
   post "products" => "products#create"
 
