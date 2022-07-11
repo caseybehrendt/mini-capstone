@@ -14,3 +14,9 @@ product = Product.create(name: "Sony Playstation", price: 989.00, image_url: "ht
 product = Product.create(name: "Nintendo Switch", price: 299.00, image_url: "https://m.media-amazon.com/images/I/61-PblYntsL._AC_SL1500_.jpg", description: "Get the gaming system that lets you play the games you want, wherever you are, however you like. Includes the Nintendo Switch console and Nintendo Switch dock in black, with contrasting left and right JoyCon controllers-one red, one blue. Also includes all the extras you need to get started. Model number: HAC-001(-01) (product serial number begins with “XKW”) This model includes battery life of approximately 4.5 - 9 hours. The battery life will depend on the games you play. For instance, the battery will last approximately 5.5 hours for The Legend of Zelda: Breath of the Wild (games sold separately). ")
 
 product = Product.create(name: "Hyena", price: 199.00, image_url: "https://a-z-animals.com/media/animals/images/original/hyena_3.jpg", description: "Hungry Hyena that will eat small children and crumbs off the kitchen floor. Has a temper and is not house trained. ")
+
+supplier = Supplier.create(name: "Hyena Farm", email: "laughing@hyena.com", phone_number: "123-456-7890")
+
+supplier = Supplier.create(name: "Nintendo", email: "supply@n.com", phone_number: "000-000-0000")
+
+supplier = Supplier.create(name: "Sony", email: "inventory@ex", phone_number: "098-654-3210")

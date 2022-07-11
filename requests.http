@@ -10,7 +10,7 @@ GET http://localhost:3000/product/34.json
 
 ### Product Create
 
-POST http://localhost:3000/product.json
+POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
@@ -19,6 +19,7 @@ Content-Type: application/json
   "image_url": "test image_url",
   "description": "test description"
 }
+
 
 
 ### Product Update
@@ -34,3 +35,12 @@ Content-Type: application/json
 ### Product Delete
 
 DELETE http://localhost:3000/products/21.json
+
+### Supplier Index
+
+GET http://localhost:3000/supplier.json
+
+
+### Supplier Show
+
+GET http://localhost:3000/supplier/34.json

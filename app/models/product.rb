@@ -7,6 +7,10 @@ class Product < ApplicationRecord
     created_at.strftime("%B %e, %Y")
   end
 
+  def supplier
+    Supplier.find_by(id: supplier_id)
+  end
+
   # def is_discounted
   #   if price < 10
   #     return "true"
@@ -16,8 +20,8 @@ class Product < ApplicationRecord
   # end
 
   # def tax
-  #   tax = Product.price * ".09"
-  #   return tax
+  #   tax = Product.price * .09
+  #     return tax
   # end
 
   # def total
