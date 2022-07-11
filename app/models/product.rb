@@ -10,22 +10,22 @@ class Product < ApplicationRecord
   def supplier
     Supplier.find_by(id: supplier_id)
   end
-
-  # def is_discounted
-  #   if price < 10
-  #     return "true"
-  #   else
-  #     return "false"
-  #   end
-  # end
-
-  # def tax
-  #   tax = Product.price * .09
-  #     return tax
-  # end
-
-  # def total
-  #   total = Product.price * tax
-  #   return total
-  # end
 end
+
+# def is_discounted
+#   if price < 10
+#     return "true"
+#   else
+#     return "false"
+#   end
+# end
+
+# def tax
+#   tax = Product.price * .09
+#     return tax
+# end
+
+# def total
+#   total = Product.price * tax
+#   return total
+# end
