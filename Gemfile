@@ -46,6 +46,8 @@ group :development do
   # gem "spring"
 
 gem 'jb'
-end
 
 gem 'seed_dump'
+
+gem 'jwt'
+end
