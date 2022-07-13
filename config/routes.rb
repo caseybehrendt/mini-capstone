@@ -19,9 +19,9 @@ Rails.application.routes.draw do
 
   post "/sessions" => "sessions#create"
 
-  post "/orders" => "orders#create"
+  post "/order" => "order#create"
 
-  get "/orders" => "orders#show"
+  get "/order" => "order#show"
 
-  get "/orders" => "orders#index"
+  get "/order" => "order#index"
 end

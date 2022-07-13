@@ -1,11 +1,12 @@
 class OrdersController < ApplicationController
   def index
-    @orders = Order.all
-    render json: @orders.as_json
+    @order = Order.where(user_id: current_user.id)
+    render json: @order.as_json
   end
+end
 
   def create
-    @orders = Order.new(
+    @order = Order.find_by(id: params[:id])
       user_id: params[:user_id],
       product_id: params[:product_id],
       quantity: params[:quantity],
@@ -13,16 +14,17 @@ class OrdersController < ApplicationController
       tax: params[:tax],
       total: params[:total],
     )
-    if @orders.save
+    if @order.save
       render :show
     else
-      render json: { errors: @orders.errors.full_messages },
+      render json: { errors: @order.errors.full_messages },
              status: 418
     end
   end
+end
 
   def show
-    @orders = Order.find_by(id: params[:id])
-    render json: @orders.as_json
+    @order = Order.find_by(id: params[:id])
+    render json: @order.as_json
   end
 end
