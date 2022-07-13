@@ -92,8 +92,9 @@ Content-Type: application/json
 
 ### Order Show
 
-GET http://localhost:3000/order/1.json
-
+GET http://localhost:3000/orders/1.json
 ### Product Index
 
-GET http://localhost:3000/order.json
+GET http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTc3MzU3OTl9.t3ut2yGnpKdrATMsI9Khg_oohjGF3F0Sx-NBQ7EPszY
+Content-Type: application/json

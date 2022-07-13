@@ -1,30 +1,25 @@
 class OrdersController < ApplicationController
   def index
-    @order = Order.where(user_id: current_user.id)
-    render json: @order.as_json
+    orders = current_user.orders
+    render json: orders.as_json
   end
-end
 
   def create
-    @order = Order.find_by(id: params[:id])
-      user_id: params[:user_id],
-      product_id: params[:product_id],
-      quantity: params[:quantity],
-      subtotal: params[:subtotal],
-      tax: params[:tax],
-      total: params[:total],
-    )
-    if @order.save
-      render :show
-    else
-      render json: { errors: @order.errors.full_messages },
-             status: 418
+    order = Order.new(
+      user_id: current_user.id,
+      product_id: params["product_id"],
+      quantity: params["quantity"],
+      subtotal: params["subtotal"],
+      tax: params["tax"],
+      subtotal: ["subtotal"],
+      )
+      order.save
+      render json
     end
   end
-end
 
   def show
-    @order = Order.find_by(id: params[:id])
-    render json: @order.as_json
+    order = Order.find_by(id: params[:id])
+    render json: order.as_json
   end
 end
