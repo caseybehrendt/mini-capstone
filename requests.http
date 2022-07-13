@@ -1,7 +1,7 @@
 ### Product Index
 
 GET http://localhost:3000/products.json
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTc3MzU3OTl9.t3ut2yGnpKdrATMsI9Khg_oohjGF3F0Sx-NBQ7EPszY
 
 ###Product Show
 
@@ -64,3 +64,37 @@ Content-Type: application/json
   "email": "test1@example.com",
   "password": "password12"
 }
+
+### Sessions create
+POST http://localhost:3000/sessions.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTc3MzU3OTl9.t3ut2yGnpKdrATMsI9Khg_oohjGF3F0Sx-NBQ7EPszY
+Content-Type: application/json
+
+{
+  "name": "User name",
+  "width": 640,
+  "height": 480
+}
+
+### Order Create
+
+POST http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTc4MTk3NjF9.g0DC0mV9sGbdxg5xWyhO10PCz0LhdPz_AIZckO1BuxM
+Content-Type: application/json
+
+{
+  "user_id": "1",
+  "product_id": "1",
+  "quantity": "1",
+  "subtotal": "9.99",
+  "tax": "1.01",
+  "subtotal": "11.00"
+}
+
+### Order Show
+
+GET http://localhost:3000/orders.json
+
+### Product Index
+
+GET http://localhost:3000/orders.json
