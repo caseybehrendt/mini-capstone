@@ -108,9 +108,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTgyNTU4M
 Content-Type: application/json
 
 {
-  "id": 1,
-  "user_id": 1,
+  "product_id": 1,
   "quantity": 3,
-  "status": 30,
-  "order_id": 9874
+  "status": "carted"
+  
 }
