@@ -1,13 +1,12 @@
 class Product < ApplicationRecord
   belongs_to :supplier
-  has_many :order
+  has_many :orders
   has_many :category_products
-  has_many :categories, through :category_products
-  
+  has_many :carted_products
+
   validates :name, presence: true, uniqueness: true
   validates :price, presence: true, numericality: { greater_than: 0 }
   validates :description, length: { in: 10..600 }
-
 
   def categories
     category_products.map do |category_product|

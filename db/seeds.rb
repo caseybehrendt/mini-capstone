@@ -12,3 +12,9 @@ supplier = Supplier.create(name: "Hyena Farm", email: "laughing@hyena.com", phon
 supplier = Supplier.create(name: "Nintendo", email: "supply@n.com", phone_number: "000-000-0000")
 
 supplier = Supplier.create(name: "Sony", email: "inventory@ex", phone_number: "098-654-3210")
+
+category = Category.new(name: "electronics")
+category = Category.new(name: "pets")
+
+category_product = CategoryProduct.create(product_id: 1, category_id: 2)
+category_product = CategoryProduct.create(product_id: 2, category_id: 1)

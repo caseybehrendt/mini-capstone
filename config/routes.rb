@@ -5,11 +5,11 @@ Rails.application.routes.draw do
 
   get "/product/:id" => "products#show"
 
-  post "products" => "products#create"
+  post "/products" => "products#create"
 
   patch "/products/:id" => "products#update"
 
-  delete "products/:id" => "products#destroy"
+  delete "/products/:id" => "products#destroy"
 
   get "/supplier" => "supplier#index"
 
@@ -24,4 +24,6 @@ Rails.application.routes.draw do
   get "/orders/:id" => "orders#show"
 
   get "/orders" => "orders#index"
+
+  post "/carted_products" => "carted_products#create"
 end

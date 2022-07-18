@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::API
-  before_action: :authenticate_user
+  #before_action: :authenticate_user
   def current_user
     auth_headers = request.headers["Authorization"]
     if auth_headers.present? && auth_headers[/(?<=\A(Bearer ))\S+\z/]

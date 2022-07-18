@@ -1,7 +1,7 @@
 ### Product Index
 
 GET http://localhost:3000/products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTc3MzU3OTl9.t3ut2yGnpKdrATMsI9Khg_oohjGF3F0Sx-NBQ7EPszY
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTgyNTU4Mzh9.tvRRzOOswQmaBrXjwv1_x5TMny4R-jfVIFH_lgH-n1s
 
 ###Product Show
 
@@ -11,6 +11,7 @@ GET http://localhost:3000/product/34.json
 ### Product Create
 
 POST http://localhost:3000/products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTgyNTU4Mzh9.tvRRzOOswQmaBrXjwv1_x5TMny4R-jfVIFH_lgH-n1s
 Content-Type: application/json
 
 {
@@ -98,3 +99,18 @@ GET http://localhost:3000/orders/1.json
 GET http://localhost:3000/orders.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTc3MzU3OTl9.t3ut2yGnpKdrATMsI9Khg_oohjGF3F0Sx-NBQ7EPszY
 Content-Type: application/json
+
+
+### Carted_Products Create
+
+POST http://localhost:3000/carted_products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTgyNTU4Mzh9.tvRRzOOswQmaBrXjwv1_x5TMny4R-jfVIFH_lgH-n1s
+Content-Type: application/json
+
+{
+  "id": 1,
+  "user_id": 1,
+  "quantity": 3,
+  "status": 30,
+  "order_id": 9874
+}
